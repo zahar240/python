@@ -10,11 +10,10 @@
 def num_translate_adv(english, dictionary):
     if english.istitle() :
         result = dictionary.get(english.lower())
-        return result.capitalize()
+        return str(result).capitalize()
     else:
         return dictionary.get(english)
-        
-          
+                  
 
 english_russia = {
         "zero":"ноль",
@@ -33,3 +32,6 @@ english_russia = {
 english_word = input("Enter a number in English from 0 to 10: ")
 
 print(num_translate_adv(english_word, english_russia))
+
+# Вывод None в случае заглавной буквы добавил после просмотра разбора ДЗ
+ 
